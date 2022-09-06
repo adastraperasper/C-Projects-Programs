@@ -1,0 +1,129 @@
+#include<iostream>
+#include<iomanip>
+#include<fstring>
+#include<string.h>
+#include<conio.h>
+using namespace std;
+
+/////////////////////////
+////////////////////Classes////////////
+
+class Cars
+{
+protected:
+	char name[30];
+	int ID; //format 4 digits
+	bool booked;// 1 or 0
+public:
+	void getdata();
+	void putdata();
+	void modify();
+	bool booked - status() {
+		return booked;
+	}
+	int get_ID() {
+		return ID;
+	}
+	char* get_name() {
+		return name;
+	}
+	void bookit() {
+		this->booked = 1;
+	}
+	void unbookit() {
+		this->booked = 0;
+	}
+}c;
+class Login {
+protected:
+	char username[100];
+	char password[50];
+};
+class Login_user : public Login {
+public:
+	void Register();
+	int check_user_existence(char[]);
+	void login(chard user_n[], char pass[]);
+	// display available cars
+	int show_hatchback();
+	int show_sedan();
+	int show_suv();
+	int show_luxury();
+	// book the available cars
+	void book_hatchback();
+	void book_sedan();
+	void book_suv();
+	void book_luxury();
+	// invoices
+	//void invoice(int);
+	void bill(int); //void bill (float,int,char*);
+	// do work function
+	void do_user_work();
+	void unbook();
+	int search_car_hatchback(int);
+	int search_car_sedan(int);
+	int search_car_suv(int);
+	int search_car_luxury(int);
+};
+
+class Login_admin :public Login {
+public:
+	void login_admin()char user_n[], char pass[]);
+	//void register_admin();
+	void Export_user_data();// exporting user data to csv
+	void Read_user_data();
+	// this is file class in original code
+	void search_car();
+	void delete_c();
+	void Export();
+	void modify_car();
+	void add_car_hatchback();
+	void add_car_luxury();
+	void add_car_sedan();
+	void add_car_suv();
+	// display versions
+	void display_car_hatchbacks();
+	void display_car_sedan();
+	// do work function 
+	void do_work();
+	/////////////////////////////////////////////////////////
+		////////////////////////string oparations////////////
+
+	int str_len(char c[])
+	{
+		int length = 0;
+		while (c[length] != '\0')
+		{
+			length++;
+		}
+		return length;
+	}
+	string conv_to_str(char* a, int size)
+	{
+		int i;
+		string s = "";
+		for (i = 0, i < size; i++)
+		{
+			s = s + a[i];
+
+		}
+		return s;
+	}
+	int isSubstring(string s1, string s2)
+	{
+		int M = s1.length();
+		int N = s2.length();
+		for (int i = 0; i <= n - M; i++) { //a loop inside pat[] one by one
+			int j;
+			for (j = 0; j < M, j++) // for current index i,check pattern match
+				if (s2[i + j] != s1[j])
+					break;
+			if (j == M)
+				return i;
+		}
+		return i;
+	}
+	return -1;
+}
+//////////////////////////////////////////////////////////////
+//////////////////////Car Class Functions////////////////////
